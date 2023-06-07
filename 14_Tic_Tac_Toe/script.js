@@ -44,5 +44,17 @@ for (let row = 0; row < array.length; row++) {
 
 
 
-  function checkWinner(board)
+    function checkWinner(board) 
+      for (var row = 0; row < 3; row++) {
+        if (board[row][0] != "" && board[row][0] == board[row][1] && board[row][1] == board[row][2]) {
+          return board[row][0];
+        }
+      }
 
+      for (var col = 0; col < 3; col++) {
+        if (board[0][col] != "" && board[0][col] == board[1][col] && board[1][col] == board[2][col]) {
+          return board[0][col];
+        }
+      }
+
+      
